@@ -23,12 +23,14 @@
 		event.preventDefault();
 
 		$(".nav").removeClass("head");
+		$("#logo").removeClass("visible");
 	});
 
 	$(".postwo").on("click", function (event) {
 		event.preventDefault();
 
 		$(".nav").addClass("head");
+		$("#logo").addClass("visible");
 	});
 
 

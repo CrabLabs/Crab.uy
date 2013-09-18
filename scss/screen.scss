@@ -11,6 +11,7 @@ body{
 	background: $white;
 	height: 100%;
 	margin: 0 auto;
+	min-height: 100%;
 }
 
 p, a, h1, h2, h3, h4, h5, h6, li{
@@ -23,11 +24,52 @@ p, a, h1, h2, h3, h4, h5, h6, li{
 p, a{
 	font-size: 0.8em;
 }
+<<<<<<< HEAD
 
 @import "header";
 
 #main{
 	height: 100%;
+=======
+h4{
+	font-size: 3em;
+}
+header{
+	bottom: 0;
+	padding: 20px 0;
+	position: absolute;
+	width: 100%;
+	&.head{
+		position: fixed;
+		top: 0;
+	}
+	ul{
+		list-style: none;
+		text-align: center;
+		li{
+			display: inline-block;
+			opacity: 0.25;
+			padding: 5px 10px;
+			-webkit-transition: all 100ms;
+			   -moz-transition: all 100ms;
+			    -ms-transition: all 100ms;
+			     -o-transition: all 100ms;
+			        transition: all 100ms;
+			&:hover, &.active{
+				opacity: 1;
+			}
+		}
+	}
+	h1{
+		display: none;
+		position: fixed;
+		right: 0;
+		top: 0;
+		&.visible{
+			display: block;
+		}
+	}
+>>>>>>> 040846175fb65e3a1b1b2667d3cb6959a649fab8
 }
 
 section{
@@ -45,6 +87,31 @@ section{
 			height: 250px;
 			margin: 0 auto;
 			width: 250px;
+		}
+	}
+	&#portfolio{
+		ul{
+			display: block;
+			left: 0;
+			position: absolute;
+			li{
+				a{
+					h4{
+						border-left: 10px solid $white;
+						opacity: 0.25;
+						padding: 5px 20px;
+						-webkit-transition: all 100ms;
+						   -moz-transition: all 100ms;
+						    -ms-transition: all 100ms;
+						     -o-transition: all 100ms;
+						        transition: all 100ms;
+						&:hover, &.active{
+							border-left: 10px solid $gray;
+							opacity: 1;
+						}
+					}
+				}
+			}
 		}
 	}
 }
