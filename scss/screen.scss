@@ -19,9 +19,14 @@ p, a{
 	font-size: 0.8em;
 }
 header{
+	bottom: 0;
 	padding: 20px 0;
 	position: absolute;
 	width: 100%;
+	&.head{
+		position: fixed;
+		top: 0;
+	}
 	ul{
 		list-style: none;
 		text-align: center;
