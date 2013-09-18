@@ -93,8 +93,13 @@ section{
 						     -o-transition: all 100ms;
 						        transition: all 100ms;
 						&:hover, &.active{
-							border-left: 10px solid $gray;
 							opacity: 1;
+							&.ident{
+								border-left: 10px solid $ident;
+							}
+							&.web{
+								border-left: 10px solid $web;
+							}
 						}
 					}
 				}
