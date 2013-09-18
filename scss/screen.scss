@@ -19,6 +19,9 @@ p, a, h1, h2, h3, h4, h5, h6, li{
 p, a{
 	font-size: 0.8em;
 }
+h4{
+	font-size: 3em;
+}
 header{
 	bottom: 0;
 	padding: 20px 0;
@@ -45,6 +48,15 @@ header{
 			}
 		}
 	}
+	h1{
+		display: none;
+		position: fixed;
+		right: 0;
+		top: 0;
+		&.visible{
+			display: block;
+		}
+	}
 }
 section{
 	display: block;
@@ -60,6 +72,31 @@ section{
 			height: 250px;
 			margin: 0 auto;
 			width: 250px;
+		}
+	}
+	&#portfolio{
+		ul{
+			display: block;
+			left: 0;
+			position: absolute;
+			li{
+				a{
+					h4{
+						border-left: 10px solid $white;
+						opacity: 0.25;
+						padding: 5px 20px;
+						-webkit-transition: all 100ms;
+						   -moz-transition: all 100ms;
+						    -ms-transition: all 100ms;
+						     -o-transition: all 100ms;
+						        transition: all 100ms;
+						&:hover, &.active{
+							border-left: 10px solid $gray;
+							opacity: 1;
+						}
+					}
+				}
+			}
 		}
 	}
 }
