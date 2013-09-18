@@ -3,7 +3,9 @@
 
 	section{
 		display: block;
-		height: 100%;
+		height: -webkit-calc(100% - 80px);
+		height: -moz-calc(100% - 80px);
+		height: calc(100% - 80px);
 		position: relative;
 		
 		@import "sections/home";
