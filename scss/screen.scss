@@ -52,6 +52,10 @@ section{
 			font-size: 0%;
 			height: 250px;
 			margin: 0 auto;
+			position: relative;
+			top: -webkit-calc(50% - 125px);
+			top: -moz-calc(50% - 125px);
+			top: calc(50% - 125px);
 			width: 250px;
 		}
 	}
