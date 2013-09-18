@@ -1,53 +1,38 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
-@import "_variables.scss";
+@import "variables";
+
+html, body{
+	height: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
 
 body{
 	background: $white;
+	height: 100%;
 	margin: 0 auto;
 }
+
 p, a, h1, h2, h3, h4, h5, h6, li{
 	color: $gray;
 	font-family: helvetica, arial, sans-serif;
 	font-weight: normal;
 	text-decoration: none;
 }
+
 p, a{
 	font-size: 0.8em;
 }
-header{
-	bottom: 0;
-	padding: 20px 0;
-	position: absolute;
-	width: 100%;
-	&.head{
-		position: fixed;
-		top: 0;
-	}
-	ul{
-		list-style: none;
-		text-align: center;
-		li{
-			display: inline-block;
-			opacity: 0.25;
-			padding: 5px 10px;
-			-webkit-transition: all 100ms;
-			   -moz-transition: all 100ms;
-			    -ms-transition: all 100ms;
-			     -o-transition: all 100ms;
-			        transition: all 100ms;
-			&:hover, &.active{
-				opacity: 1;
-			}
-		}
-	}
+
+@import "header";
+
+#main{
+	height: 100%;
 }
+
 section{
 	display: block;
+	height: 100%;
 	&#home{
 		background: url(../img/bg.jpg);
 		h1{
