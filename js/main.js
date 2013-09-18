@@ -1,6 +1,21 @@
+(function ($) {
+	"use strict";
 
-$(".postwo").on("click", function (e) {
-	e.preventDefault();
-	
-	$('.nav').toggleClass('head');
-});
+	$(document).on("ready", function () {
+
+	});
+
+	$(".posone").on("click", function (event) {
+		event.preventDefault();
+
+		$(".nav").removeClass("head");
+	});
+
+	$(".postwo").on("click", function (event) {
+		event.preventDefault();
+
+		$(".nav").addClass("head");
+	});
+
+
+}(jQuery));
