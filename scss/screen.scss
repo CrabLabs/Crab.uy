@@ -4,7 +4,6 @@
 html, body{
 	height: 100%;
 	min-height: 100%;
-	overflow: hidden;
 }
 
 body{
@@ -33,6 +32,7 @@ p, a{
 
 h4{
 	font-size: 3em;
+	font-weight: lighter;
 }
 
 section{
@@ -89,6 +89,9 @@ section{
 					}
 				}
 			}
+		}
+		h4{
+			text-align: left;
 		}
 	}
 }
