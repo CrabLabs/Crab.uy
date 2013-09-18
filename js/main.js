@@ -19,19 +19,14 @@
 		});
 	});
 
-	$(".posone").on("click", function (event) {
-		event.preventDefault();
+	$(document).on("scroll", function (event) {
+		var scrollTop = $(document).scrollTop();
 
-		$(".nav").removeClass("head");
-		$("#logo").removeClass("visible");
+		if (scrollTop >= $(window).height() - 80) {
+			$(".nav").addClass("head");
+		} else {
+			$(".nav").removeClass("head");
+		}
 	});
-
-	$(".postwo").on("click", function (event) {
-		event.preventDefault();
-
-		$(".nav").addClass("head");
-		$("#logo").addClass("visible");
-	});
-
 
 }(jQuery));
