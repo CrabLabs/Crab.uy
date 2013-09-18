@@ -46,6 +46,25 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
+        <script type="text/javascript">
+            $(function(){
+                 $('a[href*=#]').click(function() {
+                 if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+                     && location.hostname == this.hostname) {
+                         var $target = $(this.hash);
+                         $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+                         if ($target.length) {
+                             var targetOffset = $target.offset().top;
+                             $('html,body').animate({scrollTop: targetOffset}, 1000);
+                             return false;
+                        }
+                   }
+               });
+            });
+
+            var inPullNav = false;
+        </script>
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

@@ -19,6 +19,9 @@ p, a{
 	font-size: 0.8em;
 }
 header{
+	padding: 20px 0;
+	position: absolute;
+	width: 100%;
 	ul{
 		list-style: none;
 		text-align: center;
@@ -39,11 +42,15 @@ header{
 }
 section{
 	display: block;
-	min-height: 100%;
 	&#home{
+		background: url(../img/bg.jpg);
 		h1{
-			background-image: url();
-			background-image: url(), url();
+			background-image: url(../img/crab.png);
+			background-image: url(../img/crab.png), url(../img/crab.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: block;
+			font-size: 0%;
 		}
 	}
 }
