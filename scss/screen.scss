@@ -37,9 +37,12 @@ h4{
 
 section{
 	display: block;
-	height: 100%;
 	&#home{
-		background: url(../img/bg.jpg);
+		background: url(../img/bg.jpg) no-repeat;
+		background-size: cover;
+		height: -webkit-calc(100% - 80px);
+		height: -moz-calc(100% - 80px);
+		height: calc(100% - 80px);
 		h1{
 			background-image: url(../img/crab.png);
 			background-image: url(../img/crab.png), url(../img/crab.svg);
