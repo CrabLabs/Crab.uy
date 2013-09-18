@@ -1,0 +1,36 @@
+&#portfolio{
+	padding-top: 80px;
+
+	ul{
+		display: block;
+		left: 0;
+		position: absolute;
+		li{
+			a{
+				h4{
+					border-left: 10px solid $white;
+					opacity: 0.25;
+					padding: 5px 20px;
+					-webkit-transition: all 100ms;
+					   -moz-transition: all 100ms;
+					    -ms-transition: all 100ms;
+					     -o-transition: all 100ms;
+					        transition: all 100ms;
+					&:hover, &.active{
+						opacity: 1;
+						&.ident{
+							border-left: 10px solid $ident;
+						}
+						&.web{
+							border-left: 10px solid $web;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	h4{
+		text-align: left;
+	}
+}

@@ -1,0 +1,23 @@
+&#home{
+	background: url(../img/bg.jpg) no-repeat;
+	background-size: cover;
+	height: -webkit-calc(100% - 80px);
+	height: -moz-calc(100% - 80px);
+	height: calc(100% - 80px);
+
+	h1{
+		background-image: url(../img/crab.png);
+		background-image: url(../img/crab.png), url(../img/crab.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: block;
+		font-size: 0%;
+		height: 250px;
+		margin: 0 auto;
+		position: relative;
+		top: -webkit-calc(50% - 125px);
+		top: -moz-calc(50% - 125px);
+		top: calc(50% - 125px);
+		width: 250px;
+	}
+}
