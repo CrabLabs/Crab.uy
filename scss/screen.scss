@@ -37,6 +37,7 @@ h4{
 
 section{
 	display: block;
+	height: 100%;
 	&#home{
 		background: url(../img/bg.jpg) no-repeat;
 		background-size: cover;
@@ -60,6 +61,7 @@ section{
 		}
 	}
 	&#portfolio{
+		padding-top: 80px;
 		ul{
 			display: block;
 			left: 0;
