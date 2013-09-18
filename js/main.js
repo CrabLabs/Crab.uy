@@ -22,6 +22,14 @@
 	$(document).on("scroll", function (event) {
 		var scrollTop = $(document).scrollTop();
 
+		$(".nav ul li").each(function (index) {
+			if (index === Math.floor(scrollTop / ($(document).height() - 80) * 4)) {
+				$(this).addClass("active");
+			} else {
+				$(this).removeClass("active");
+			}
+		});
+
 		if (scrollTop >= $(window).height() - 80) {
 			$(".nav").addClass("head");
 		} else {
