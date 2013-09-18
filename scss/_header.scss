@@ -1,8 +1,11 @@
 header{
 	bottom: 10px;
+	height: 26px;
 	padding: 20px 0;
 	position: absolute;
 	width: 100%;
+	z-index: 999;
+
 	&.head{
 		position: fixed;
 		top: 0;
