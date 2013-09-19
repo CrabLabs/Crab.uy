@@ -42,18 +42,9 @@
                     <li><a href="#identity"><h4 class="ident">identity</h4></a></li>
                     <li><a href="#web"><h4 class="web">web</h4></a></li>
                 </ul>
-                <div id="portfolio_stage">
-                    <ul id="portfolio_ident">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
+                
+                <div id="portfolio_stage"><!-- AJAX --></div>
+
                 <h4 id="portfolio_title">something to say about our work..</h4>
             </section>
             
@@ -69,11 +60,39 @@
 
         <footer></footer>
 
+        <script id="portfolio-ident-template" type="text/x-handlebars-template">
+            <ul id="portfolio_ident">
+                {{#each projects}}
+                    <li data-id="{{ id }}">
+                        <span>{{ title }}</span>
+                        <img src="{{ img }}">
+                    </li>
+                {{/each}}
+            </ul>
+        </script>
+
+        <script id="portfolio-ident-show-template" type="text/x-handlebars-template">
+            <div id="portfolio_ident_show">
+                <img src="{{ img1 }}">
+            </div>
+        </script>
+
+        <script id="portfolio-web-template" type="text/x-handlebars-template">
+            <ul id="portfolio_web">
+                {{#each projects}}
+                    <li data-id="{{ id }}">
+                        <span>{{ title }}</span>
+                        <img src="{{ img }}">
+                    </li>
+                {{/each}}
+            </ul>
+        </script>
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/vendor/handlebars.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

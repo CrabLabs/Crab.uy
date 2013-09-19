@@ -1,6 +1,11 @@
 (function ($) {
 	"use strict";
 
+	var identyShowTemplate,
+		webShowTemplate,
+		identyTemplate,
+		webTemplate;
+
 	$(document).on("ready", function () {
 		$("a[href*=#]").click(function() {
 			if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
@@ -17,6 +22,12 @@
 				}
 			}
 		});
+
+		identyTemplate 		= Handlebars.compile($("#portfolio-ident-template").html());
+		identyShowTemplate 	= Handlebars.compile($("#portfolio-ident-show-template").html());
+		webTemplate 		= Handlebars.compile($("#portfolio-web-template").html());
+
+		$(".ident").click();
 	});
 
 	$(document).on("scroll", function (event) {
@@ -35,6 +46,34 @@
 		} else {
 			$(".nav").removeClass("head");
 		}
+	});
+
+	$(".ident").on("click", function (event) {
+		event.preventDefault();
+
+		$(this).addClass("active");
+		$(".web").removeClass("active");
+
+		$("#portfolio_stage").fadeOut();
+		$.getJSON("json/identity.json", function (data) {
+			var html = identyTemplate(data);
+			$("#portfolio_stage").html(html);
+			$("#portfolio_stage").fadeIn();
+		});
+	});
+
+	$(".web").on("click", function (event) {
+		event.preventDefault();
+
+		$(this).addClass("active");
+		$(".ident").removeClass("active");
+
+		$("#portfolio_stage").fadeOut();
+		$.getJSON("json/identity.json", function (data) {
+			var html = webTemplate(data);
+			$("#portfolio_stage").html(html);
+			$("#portfolio_stage").fadeIn();
+		});
 	});
 
 }(jQuery));
