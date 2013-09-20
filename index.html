@@ -54,9 +54,10 @@
         </header>
 
         <div id="main" role="main">
-            <section id="home">
+            <section id="home" class="port parallax-viewport">
                 <!--<h1>Crab.uy</h1>-->
-                <canvas id="canvas" width="400" height="400"></canvas>
+                <canvas id="canvas" class="parallax-layer" width="400" height="400"></canvas>
+                <span></span>
             </section>
             
             <section id="portfolio">
@@ -113,7 +114,7 @@
             </ul>
         </script>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/handlebars.js"></script>
         <script src="js/plugins.js"></script>
@@ -126,6 +127,18 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        <script type="text/javascript" src="js/jquery.event.frame.js"></script>
+        <script type="text/javascript" src="js/jquery.jparallax.min.js"></script>
+        <script type="text/javascript" src="js/jquery.jparallax.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+              
+                jQuery('#home .parallax-layer')
+                .parallax({
+                    mouseport: jQuery('#home')
+                });
+            });
         </script>
     </body>
 </html>
