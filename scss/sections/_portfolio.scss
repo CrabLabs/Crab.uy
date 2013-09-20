@@ -39,12 +39,12 @@
 		width:         calc(100% - 300px);
 
 		#portfolio_ident{
-			overflow-x: scroll;
-    		overflow-y: hidden;
-			white-space: nowrap;
+			// overflow-x: scroll;
+			// overflow-y: hidden;
+			// white-space: nowrap;
 			li{
-				//float: left;
-				display: inline-block;
+				float: left;
+				// display: inline-block;
 				height: 220px;
 				margin: 5px;
 				position: relative;
@@ -83,7 +83,9 @@
 		#portfolio_web{
 			li{
 				img{
+					display: block;
 					max-height: 550px;
+					margin: 0 auto;
 				}
 				span{
 					display: none;
