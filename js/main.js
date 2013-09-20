@@ -31,10 +31,11 @@
 	});
 
 	$(document).on("scroll", function (event) {
-		var scrollTop = $(document).scrollTop();
+		var scrollTop = $(document).scrollTop(),
+			scrollMod = scrollTop / ($(document).height() - 80) * 4;
 
 		$(".nav ul li").each(function (index) {
-			if (index === Math.floor(scrollTop / ($(document).height() - 80) * 4)) {
+			if (index === Math.floor(scrollMod)) {
 				$(this).addClass("active");
 			} else {
 				$(this).removeClass("active");
@@ -47,6 +48,7 @@
 			$(".nav").removeClass("head");
 
 			$("#home").css("background-position-y", scrollTop / 2);
+			$("#canvas").css("opacity", Math.abs(scrollMod - 1));
 		}
 	});
 
