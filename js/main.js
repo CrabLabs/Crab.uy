@@ -69,7 +69,7 @@
 		$(".ident").removeClass("active");
 
 		$("#portfolio_stage").fadeOut();
-		$.getJSON("json/identity.json", function (data) {
+		$.getJSON("json/web.json", function (data) {
 			var html = webTemplate(data);
 			$("#portfolio_stage").html(html);
 			$("#portfolio_stage").fadeIn();
