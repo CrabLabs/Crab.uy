@@ -4,9 +4,18 @@ header{
 	padding: 20px 0;
 	position: absolute;
 	width: 100%;
+	-webkit-transition: all 100ms;
+	   -moz-transition: all 100ms;
+	    -ms-transition: all 100ms;
+	     -o-transition: all 100ms;
+	        transition: all 100ms;
 	z-index: 999;
 
 	&.head{
+		@include filter-gradient(#e6e6e6, #00E6E6, vertical); // IE6-8
+		// IE9 SVG, needs conditional override of 'filter' to 'none'
+		$experimental-support-for-svg: true;
+		@include background-image(linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(230,230,230,0) 100%));
 		position: fixed;
 		top: 0;
 	}
