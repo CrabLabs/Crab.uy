@@ -16,8 +16,29 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/screen.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="http://code.createjs.com/easeljs-0.5.0.min.js"></script>
+        <script src="http://code.createjs.com/tweenjs-0.3.0.min.js"></script>
+        <script src="http://code.createjs.com/movieclip-0.5.0.min.js"></script>
+        <script src="js/anim.js"></script>
+
+        <script>
+        var canvas, stage, exportRoot;
+
+        function init() {
+            canvas = document.getElementById("canvas");
+            exportRoot = new lib.anim();
+
+            stage = new createjs.Stage(canvas);
+            stage.addChild(exportRoot);
+            stage.update();
+
+            createjs.Ticker.setFPS(30);
+            createjs.Ticker.addListener(stage);
+        }
+        </script>
+
     </head>
-    <body>
+    <body onload="init();">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -34,7 +55,8 @@
 
         <div id="main" role="main">
             <section id="home">
-                <h1>Crab.uy</h1>
+                <!--<h1>Crab.uy</h1>-->
+                <canvas id="canvas" width="400" height="400"></canvas>
             </section>
             
             <section id="portfolio">
