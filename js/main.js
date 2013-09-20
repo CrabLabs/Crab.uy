@@ -45,6 +45,8 @@
 			$(".nav").addClass("head");
 		} else {
 			$(".nav").removeClass("head");
+
+			$("#home").css("background-position-y", scrollTop / 2);
 		}
 	});
 
