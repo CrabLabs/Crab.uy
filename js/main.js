@@ -54,11 +54,12 @@
 		$(this).addClass("active");
 		$(".web").removeClass("active");
 
-		$("#portfolio_stage").fadeOut();
-		$.getJSON("json/identity.json", function (data) {
-			var html = identyTemplate(data);
-			$("#portfolio_stage").html(html);
-			$("#portfolio_stage").fadeIn();
+		$("#portfolio_stage").stop(true, true).fadeOut(255, function () {
+			$.getJSON("json/identity.json", function (data) {
+				var html = identyTemplate(data);
+				$("#portfolio_stage").html(html);
+				$("#portfolio_stage").fadeIn();
+			});
 		});
 	});
 
@@ -68,11 +69,12 @@
 		$(this).addClass("active");
 		$(".ident").removeClass("active");
 
-		$("#portfolio_stage").fadeOut();
-		$.getJSON("json/web.json", function (data) {
-			var html = webTemplate(data);
-			$("#portfolio_stage").html(html);
-			$("#portfolio_stage").fadeIn();
+		$("#portfolio_stage").stop(true, true).fadeOut(255, function () {
+			$.getJSON("json/web.json", function (data) {
+				var html = webTemplate(data);
+				$("#portfolio_stage").html(html);
+				$("#portfolio_stage").fadeIn();
+			});	
 		});
 	});
 
