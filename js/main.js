@@ -27,7 +27,7 @@
 		identyShowTemplate 	= Handlebars.compile($("#portfolio-ident-show-template").html());
 		webTemplate 		= Handlebars.compile($("#portfolio-web-template").html());
 
-		$(".ident").click();
+		$(".web").click();
 	});
 
 	$(document).on("scroll", function (event) {
@@ -45,7 +45,7 @@
 		if (scrollTop >= $(window).height() - 80) {
 			$(".nav").addClass("head");
 
-			$("#logo").css("top", scrollTop / - 2);
+			$("#logo").css("top", scrollTop * - 1.5);
 		} else {
 			$(".nav").removeClass("head");
 

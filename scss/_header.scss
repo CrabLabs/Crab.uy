@@ -1,3 +1,11 @@
+@-webkit-keyframes logo
+{
+	50%{
+	}
+	100%{		
+	}
+}
+
 header{
 	bottom: 10px;
 	height: 26px;
@@ -17,12 +25,12 @@ header{
 		top: 0;
 		div{
 			opacity: 1;
-			right: 0;
-			-webkit-transform: scale(1);
-			   -moz-transform: scale(1);
-			    -ms-transform: scale(1);
-			     -o-transform: scale(1);
-			        transform: scale(1);
+			right: -30px;
+			-webkit-transform: scale(0.8);
+			   -moz-transform: scale(0.8);
+			    -ms-transform: scale(0.8);
+			     -o-transform: scale(0.8);
+			        transform: scale(0.8);
 		}
 	}
 	ul{
@@ -40,6 +48,9 @@ header{
 			&:hover, &.active{
 				opacity: 1;
 			}
+			a{
+				font-size: 1em;
+			}
 		}
 	}
 	div{
@@ -48,15 +59,15 @@ header{
 		opacity: 0;
 		overflow: hidden;
 		position: fixed;
-		right: -250px;
-		top: -70px;
+		right: -350px;
+		top: -100px;
 		width: 270px;
 		z-index: 10000;
-		-webkit-mask-image: url(../img/crab.svg);
-		   -moz-mask-image: url(../img/crab.svg);
-		    -ms-mask-image: url(../img/crab.svg);
-		     -o-mask-image: url(../img/crab.svg);
-				mask-image: url(../img/crab.svg);
+		-webkit-mask-image: url(../img/crab.svg), url(../img/crab.png);
+		   -moz-mask-image: url(../img/crab.svg), url(../img/crab.png);
+		    -ms-mask-image: url(../img/crab.svg), url(../img/crab.png);
+		     -o-mask-image: url(../img/crab.svg), url(../img/crab.png);
+				mask-image: url(../img/crab.svg), url(../img/crab.png);
 		-webkit-transform: scale(0.2);
 		   -moz-transform: scale(0.2);
 		    -ms-transform: scale(0.2);
@@ -67,15 +78,24 @@ header{
 		    -ms-transition: all 100ms;
 		     -o-transition: all 100ms;
 				transition: all 100ms;
+		&:hover{
+			h1{
+				-webkit-animation: logo infinite 5s;
+				   -moz-animation: logo infinite 5s;
+				    -ms-animation: logo infinite 5s;
+				     -o-animation: logo infinite 5s;
+				     	animation: logo infinite 5s;
+			}
+		}
 		h1{
-			background: url(../img/bg.jpg) no-repeat;
+			background: url(../img/bg-logo.png) no-repeat;
 			background-position: right top;
 			background-size: cover;
 			display: block;
-			height: 1000px;
+			height: 4800px;
 			position: relative;
-			top: -300px;
-			width: 300px;
+			top: 0px;
+			width: 500px;
 		}
 	}
 }

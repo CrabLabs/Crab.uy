@@ -58,25 +58,36 @@
             
             <section id="portfolio">
                 <ul id="portfolio_nav">
-                    <li><a href="#identity"><h4 class="ident">identity</h4></a></li>
-                    <li><a href="#web"><h4 class="web">web</h4></a></li>
+                    <li><a href="#web"><h3 class="web">web</h3></a></li>
+                    <li><a href="#identity"><h3 class="ident">identity</h3></a></li>
                 </ul>
                 
                 <div id="portfolio_stage"><!-- AJAX --></div>
 
-                <h4 id="portfolio_title">can experience be designed?</h4>
+                <h2 id="portfolio_title">can experience be designed?</h2>
             </section>
             
-            <section id="about"></section>
+            <section id="about">
+                <ul>
+                    <li id="gu">
+                        <div class="mask"></div>
+                    </li>
+                    <li id="ro">
+                        <div class="mask"></div>
+                    </li>
+                </ul>
+            </section>
             
             <section id="contact">
                 
-                <form action="index.html" method="POST">
-                    <!-- Si el aside de acá es para meter información después me encargo de hacer encajar todo -->
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <textarea placeholder="Message"></textarea>
+                <form action="mail.php" method="post" name="form">
+                    <input name="nombre" class="caja" type="text" placeholder="Nombre">
+                    <input name="email" class="caja" type="text" placeholder="Email">
+                    <textarea name="mensaje" cols="" rows="" wrap="off" class="mensaje"  placeholder="Tu mensaje.."></textarea>
+                    <input name="enviar" type="submit" value="Enviar" id="enviar">
                 </form>
+
+                <span>design & develop <a href="http://crab.uy">crab.uy</a> - © 2013 crab labs</span>
             </section>
         </div>
 

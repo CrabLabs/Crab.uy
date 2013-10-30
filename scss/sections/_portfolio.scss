@@ -7,8 +7,7 @@
 		position: absolute;
 		li{
 			a{
-				h4{
-					border-left: 10px solid $white;
+				h3{
 					opacity: 0.25;
 					padding: 5px 20px;
 					-webkit-transition: all 100ms;
@@ -19,10 +18,10 @@
 					&:hover, &.active{
 						opacity: 1;
 						&.ident{
-							border-left: 10px solid $ident;
+							border-left: 6px solid $ident;
 						}
 						&.web{
-							border-left: 10px solid $web;
+							border-left: 6px solid $web;
 						}
 					}
 				}
