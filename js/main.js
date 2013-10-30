@@ -44,6 +44,8 @@
 
 		if (scrollTop >= $(window).height() - 80) {
 			$(".nav").addClass("head");
+
+			$("#logo").css("top", scrollTop / - 2);
 		} else {
 			$(".nav").removeClass("head");
 

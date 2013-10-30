@@ -12,12 +12,18 @@ header{
 	z-index: 999;
 
 	&.head{
-		@include filter-gradient(#e6e6e6, #00E6E6, vertical); // IE6-8
-		// IE9 SVG, needs conditional override of 'filter' to 'none'
-		$experimental-support-for-svg: true;
-		@include background-image(linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(230,230,230,0) 100%));
+		background: $white;
 		position: fixed;
 		top: 0;
+		div{
+			opacity: 1;
+			right: 0;
+			-webkit-transform: scale(1);
+			   -moz-transform: scale(1);
+			    -ms-transform: scale(1);
+			     -o-transform: scale(1);
+			        transform: scale(1);
+		}
 	}
 	ul{
 		list-style: none;
@@ -36,13 +42,40 @@ header{
 			}
 		}
 	}
-	h1{
-		display: none;
+	div{
+		display: block;
+		height: 400px;
+		opacity: 0;
+		overflow: hidden;
 		position: fixed;
-		right: 0;
-		top: 0;
-		&.visible{
+		right: -250px;
+		top: -70px;
+		width: 270px;
+		z-index: 10000;
+		-webkit-mask-image: url(../img/crab.svg);
+		   -moz-mask-image: url(../img/crab.svg);
+		    -ms-mask-image: url(../img/crab.svg);
+		     -o-mask-image: url(../img/crab.svg);
+				mask-image: url(../img/crab.svg);
+		-webkit-transform: scale(0.2);
+		   -moz-transform: scale(0.2);
+		    -ms-transform: scale(0.2);
+		     -o-transform: scale(0.2);
+		        transform: scale(0.2);
+		-webkit-transition: all 100ms;
+		   -moz-transition: all 100ms;
+		    -ms-transition: all 100ms;
+		     -o-transition: all 100ms;
+				transition: all 100ms;
+		h1{
+			background: url(../img/bg.jpg) no-repeat;
+			background-position: right top;
+			background-size: cover;
 			display: block;
+			height: 1000px;
+			position: relative;
+			top: -300px;
+			width: 300px;
 		}
 	}
 }
