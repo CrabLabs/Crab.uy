@@ -66,6 +66,41 @@
 		li{
 			color: $white;
 			display: inline-block;
+			&.logo-footer{
+				height: 100px;
+				margin: 0 20px;
+				opacity: 0.25;
+				width: 100px;
+				transition: all 100ms;
+				&.ecobox{
+					background-image: url(../images/footer/ecobox.png);
+					background-image: url(../images/footer/ecobox.svg), url(../images/footer/ecobox.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+				&.crab{
+					background-image: url(../images/footer/crab.png);
+					background-image: url(../images/footer/crab.svg), url(../images/footer/crab.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+				&.crabster{
+					background-image: url(../images/footer/crabster.png);
+					background-image: url(../images/footer/crabster.svg), url(../images/footer/crabster.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+				&:hover{
+					cursor: pointer;
+					opacity: 0.8;
+				}
+			}
+			&.link-footer{
+
+			}
+			&#visit-footer{
+				margin: 20px 0;
+			}
 		}
 	}
 }
