@@ -1,6 +1,7 @@
 /*global define */
-define([], function () {
+define(['handlebars'], function (Handlebars) {
     'use strict';
+    console.log(Handlebars);
 
     var identyShowTemplate,
 		webShowTemplate,
