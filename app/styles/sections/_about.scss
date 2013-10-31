@@ -50,20 +50,16 @@
 			&#gu{
 				left: 0;
 				-webkit-mask-image: url(../images/guille.png), url(../images/guille.svg);
-				&:hover .mask{
-					animation: gu infinite 5s;
-				}
 				.mask{
+					animation: gu infinite 45s;
 					bottom: -100px;
 					right: -100px;
 				}
 			}
 			&#ro{
 				-webkit-mask-image: url(../images/ro.png), url(../images/ro.svg);
-				&:hover .mask{
-					animation: ro infinite 5s;
-				}
 				.mask{
+					animation: ro infinite 45s;
 					bottom: -100px;
 					right: -500px;
 				}
