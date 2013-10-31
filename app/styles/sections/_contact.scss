@@ -1,61 +1,87 @@
 &#contact{
 	background: $gray;
 	color: $white;
-	h2{
-		color: $white;
-		border: none;
-		margin: 20px 0;
-		text-align: center;
-	}
-	form{
-		display: inline-block;
-		margin: 20px 0;
-		position: relative;
-		left: calc(50% - 160px);
-		width: 360px;
-		input, textarea{
-			background: $white;
-			border: none;
-			display: block;
-			font-style: italic;
-			font-weight: 300;
-			margin: 10px 0;
-			padding: 8px 10px;
-			width: 300px;
-		}
-		textarea{
-			height: 80px;
-			resize: none;
-		}
-		input#enviar{
-			background: $white;
-			color: $gray;
-			font-style: normal;
-			font-weight: bold;
-			position: absolute;
-			right: 40px;
-			width: auto;
-		}
-	}
-	p{
-		background: #444;
-		display: block;
-		height: 1px;
+	div{
+		border-bottom: 1px solid #444;
+		height: calc(100% - 300px);
 		margin: 0 auto;
-		position: relative;
-		top: 80px;
+		padding: 20px 0;
 		width: 80%;
-	}
-	span{
-		color: #666;
-		bottom: 20px;
-		left: calc(50% - 200px);
-		position: absolute;
-		text-align: center;
-		width: 400px;
-		a{
-			color: #999;
-			font-size: 1em;
+		h2{
+			color: $white;
+			border: none;
+			text-align: center;
+		}
+		#visit-footer{
+			bottom: 20px;
+			height: 40px;
+			margin: 0;
+			position: relative;
+			span{
+				bottom: 10px;
+				color: #666;
+				left: 0;
+				position: relative;
+				text-align: left;
+				width: auto;
+			}
+			.link-footer{
+				height: 40px;
+				margin: 0 10px;
+				opacity: 0.15;
+				width: 40px;
+				transition: all 100ms;
+				&.github{
+					background-image: url(../images/footer/github.png);
+					background-image: url(../images/footer/github.svg), url(../images/footer/github.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+				&.facebook{
+					background-image: url(../images/footer/facebook.png);
+					background-image: url(../images/footer/facebook.svg), url(../images/footer/facebook.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+				&.twitter{
+					background-image: url(../images/footer/twitter.png);
+					background-image: url(../images/footer/twitter.svg), url(../images/footer/twitter.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+				&:hover{
+					opacity: 0.6;
+				}
+			}
+		}
+		form{
+			display: inline-block;
+			position: relative;
+			left: calc(50% - 160px);
+			width: 360px;
+			input, textarea{
+				background: $white;
+				border: none;
+				display: block;
+				font-style: italic;
+				font-weight: 300;
+				margin: 10px 0;
+				padding: 8px 10px;
+				width: 300px;
+			}
+			textarea{
+				height: 80px;
+				resize: none;
+			}
+			input#enviar{
+				background: $white;
+				color: $gray;
+				font-style: normal;
+				font-weight: bold;
+				position: absolute;
+				right: 40px;
+				width: auto;
+			}
 		}
 	}
 	ul{
@@ -91,16 +117,21 @@
 					background-size: cover;
 				}
 				&:hover{
-					cursor: pointer;
 					opacity: 0.8;
 				}
 			}
-			&.link-footer{
-
-			}
-			&#visit-footer{
-				margin: 20px 0;
-			}
+		}
+	}
+	span{
+		color: #666;
+		bottom: 20px;
+		left: calc(50% - 200px);
+		position: absolute;
+		text-align: center;
+		width: 400px;
+		a{
+			color: #999;
+			font-size: 1em;
 		}
 	}
 }
