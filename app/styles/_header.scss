@@ -50,7 +50,7 @@ header{
 		top: -100px;
 		width: 270px;
 		z-index: 10000;
-		mask-image: url(../img/crab.svg), url(../img/crab.png);
+		mask-image: url(../images/crab.svg), url(../images/crab.png);
 		transform: scale(0.2);
 		transition: all 100ms;
 		&:hover{
@@ -59,7 +59,7 @@ header{
 			}
 		}
 		h1{
-			background: url(../img/bg-logo.png) no-repeat;
+			background: url(../images/bg-logo.png) no-repeat;
 			background-position: right top;
 			background-size: cover;
 			display: block;

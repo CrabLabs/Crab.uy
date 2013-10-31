@@ -11,7 +11,7 @@
 			width: 265px;
 			&#gu{
 				left: 0;
-				mask-image: url(../img/guille.png), url(../img/guille.svg);
+				mask-image: url(../images/guille.png), url(../images/guille.svg);
 				&:hover .mask{
 					animation: gu infinite 5s;
 				}
@@ -21,7 +21,7 @@
 				}
 			}
 			&#ro{
-				mask-image: url(../img/ro.png), url(../img/ro.svg);
+				mask-image: url(../images/ro.png), url(../images/ro.svg);
 				&:hover .mask{
 					animation: ro infinite 5s;
 				}
@@ -31,7 +31,7 @@
 				}
 			}
 			.mask{
-				background: url(../img/bg-nos.jpg) no-repeat;
+				background: url(../images/bg-nos.jpg) no-repeat;
 				display: block;
 				height: 800px;
 				position: absolute;
