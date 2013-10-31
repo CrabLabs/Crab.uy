@@ -4,14 +4,10 @@
 	@media #{$mobile_mid}{
 		height: auto;
 	}
-
-	p{
+	#text{
 		bottom: 200px;
 		display: block;
-		font-size: 1.2em;
-		font-weight: $light;
 		left: 560px;
-		line-height: 1.6em;
 		position: absolute;
 		text-align: left;
 		width: 560px;
@@ -24,12 +20,25 @@
 			width: calc(100% - 30px);
 		}
 
-		span{
-			font-size: 1.4em;
-			font-weight: $light;
+		h2{
+			@media #{$mobile_mid}{
+				border-bottom: 1px solid #e0e0e0;
+				line-height: 1em;
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+			}
 		}
-		b{
-			font-style: italic;
+		p{
+			font-size: 1em;
+			font-weight: $light;
+			line-height: 1.6em;
+			span{
+				font-size: 1.4em;
+				font-weight: $light;
+			}
+			b{
+				font-style: italic;
+			}
 		}
 	}
 	ul{
