@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.tmp) styles/screen.scss -->
+        <!-- build:css(.tmp) styles/screen.css -->
         <link rel="stylesheet" href="styles/screen.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -43,17 +43,13 @@
                 </ul>
                 
                 <div id="portfolio_stage">
-                    <img data-belongsTo=".web" alt='can experience be designed?' src="images/works/web/ecobox.png">
-                    <img data-belongsTo=".web" alt='Latimar | responsive cms website' src="images/works/web/latimar.png">
-                    <img data-belongsTo=".web" alt='Architect Universe | e-commerce website' src="images/works/web/architect.png">
-                    <img data-belongsTo=".ident" alt='Week | natural foods' src="images/works/ident/week.png">
-                    <img data-belongsTo=".ident" alt='Distripet | pet-product distributor' src="images/works/ident/distri.png">
-                    <img data-belongsTo=".ident" alt='Piccolina | artesanal bakery' src="images/works/ident/picco.png">
-                    <ul id="portfolio_stage_nav">
-                        <li>&bull;</li>
-                        <li>&bull;</li>
-                        <li class="active">&bull;</li>
-                    </ul>
+                    <img data-belongsTo=".web" alt='can experience be designed?' src="images/works/ecobox.png">
+                    <img data-belongsTo=".web" alt='Latimar | responsive cms website' src="images/works/latimar.png">
+                    <img data-belongsTo=".web" alt='Architect Universe | e-commerce website' src="images/works/architect.png">
+                    <img data-belongsTo=".ident" alt='Week | natural foods' src="images/works/week.png">
+                    <img data-belongsTo=".ident" alt='Distripet | pet-product distributor' src="images/works/distri.png">
+                    <img data-belongsTo=".ident" alt='Piccolina | artesanal bakery' src="images/works/picco.png">
+                    <ul id="portfolio_stage_nav"></ul>
                 </div>
 
                 <h2 id="portfolio_title">can experience be designed?</h2>
@@ -80,11 +76,11 @@
                         <li class="link-footer twitter"></li>
                     </ul>
                     
-                    <form action="mail.php" method="post" name="form">
-                        <input name="nombre" class="caja" type="text" placeholder="Nombre">
+                    <form action="post_contact.php" method="post">
+                        <input name="name" class="caja" type="text" placeholder="Name">
                         <input name="email" class="caja" type="text" placeholder="Email">
-                        <textarea name="mensaje" cols="" rows="" wrap="off" class="mensaje"  placeholder="Tu mensaje.."></textarea>
-                        <input name="enviar" type="submit" value="Enviar" id="enviar">
+                        <textarea name="message" cols="" rows="" wrap="off" class="mensaje"  placeholder="Your message.."></textarea>
+                        <input name="send" type="submit" value="Send" id="enviar">
                     </form>
                 </div>
 
@@ -98,35 +94,6 @@
             </section>
         </div>
 
-        <!--<script id="portfolio-ident-template" type="text/x-handlebars-template">
-            <ul id="portfolio_ident">
-                {{#each projects}}
-                    <li class='portfolio_ident_project' data-id="{{ id }}">
-                        <span>{{ title }}</span>
-                        <img src="{{ img }}">
-                    </li>
-                {{/each}}
-            </ul>
-        </script>
-
-        <script id="portfolio-ident-show-template" type="text/x-handlebars-template">
-            <div id="portfolio_ident_show">
-                <img src="{{ img1 }}">
-            </div>
-        </script>
-
-        <script id="portfolio-web-template" type="text/x-handlebars-template">
-            <ul id="portfolio_web">
-                {{#each projects}}
-                    <li data-id="{{ id }}">
-                        <span>{{ title }}</span>
-                        <img src="{{ img }}">
-                    </li>
-                {{/each}}
-            </ul>
-        </script>-->
-
-
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
@@ -134,14 +101,13 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            ga('create','UA-38078007-2');ga('send','pageview');
         </script>
 
         <!-- build:js scripts/main.js -->
