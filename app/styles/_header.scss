@@ -6,6 +6,10 @@ header{
 	width: 100%;
 	transition: all 100ms;
 	z-index: 999;
+	
+	@media #{$mobile_mid}{
+		display: none;
+	}
 
 	&.head{
 		background: $white;

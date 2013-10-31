@@ -1,5 +1,12 @@
 &#about{
+	height: 100%;
+
+	@media #{$mobile_mid}{
+		height: auto;
+	}
+
 	p{
+		bottom: 200px;
 		display: block;
 		font-size: 1.2em;
 		font-weight: $light;
@@ -7,8 +14,16 @@
 		line-height: 1.6em;
 		position: absolute;
 		text-align: left;
-		bottom: 200px;
 		width: 560px;
+
+		@media #{$mobile_mid}{
+			bottom: 0;
+			left: 0;
+			padding: 30px 15px;
+			position: relative;
+			width: 100%;
+		}
+
 		span{
 			font-size: 1.4em;
 			font-weight: $light;
@@ -22,6 +37,10 @@
 		display: block;
 		position: absolute;
 		transform: scale(0.75);
+
+		@media #{$mobile_mid}{
+			display: none;
+		}
 		li{
 			display: inline-block;
 			height: 800px;
