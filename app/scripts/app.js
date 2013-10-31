@@ -53,7 +53,7 @@ define(['handlebars'], function (Handlebars) {
 
 	(function () {
 		var i = 0,
-			$images = $("#portfolio_stage img"),
+			$images = $('#portfolio_stage img'),
 			belongsTo = '.web',
 			removeTo  = '.ident';
 
@@ -64,9 +64,13 @@ define(['handlebars'], function (Handlebars) {
 			removeTo  = (belongsTo === '.web') ? '.ident' : '.web';
 			$(belongsTo).addClass('active');
 			$(removeTo).removeClass('active');
+			
+			$('#portfolio_title').text($images.eq(i).attr('alt')).addClass('visible').delay(4000).removeClass('visible');
+			
 			$images.eq(i).addClass('visible').delay(4000).queue(function (next) {
 				$(this).removeClass('visible')
 				i = (i + 1 < $images.length) ? i + 1 : 0;
+				next();
 				slide(i);
 			});
 			
