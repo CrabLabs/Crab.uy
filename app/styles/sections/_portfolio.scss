@@ -1,6 +1,10 @@
 &#portfolio{
 	padding-top: 80px;
 
+	@media #{$mobile_mid}{
+		display: none;
+	}
+
 	#portfolio_nav{
 		display: block;
 		left: 0;
