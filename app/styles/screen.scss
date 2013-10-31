@@ -21,11 +21,11 @@ body{
 
 @import "main";
 
-p, a, li, span, h1, h2, h3, h4, h5, h6, input, textarea{
+p, a, li, span, pre, h1, h2, h3, h4, h5, h6, input, textarea{
 	color: $gray;
 	font-family: $open;
 }
-p, a, li, span{
+p, a, li, span, pre{
 	font-size: 0.8em;
 	font-weight: $regular;
 	line-height:1.5em;
