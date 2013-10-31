@@ -77,9 +77,21 @@ define(['handlebars'], function (Handlebars) {
 				var html = webTemplate(data);
 				$('#portfolio_stage').html(html);
 				$('#portfolio_stage').fadeIn();
-			});	
+			});
 		});
 	});
 
-    // return '\'Allo \'Allo!';
+	$(document).on('click', '.portfolio_ident_project', function (event) {
+		var id = $(this).data('id');
+		event.preventDefault();
+
+		$('#portfolio_stage').stop(true, true).fadeOut(255, function () {
+			$.getJSON('json/identities/' + id + '.json', function (data) {
+				var html = identyShowTemplate(data);
+				$('#portfolio_stage').html(html);
+				$('#portfolio_stage').fadeIn();
+			});
+		});
+	});
+
 });
