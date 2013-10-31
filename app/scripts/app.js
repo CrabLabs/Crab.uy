@@ -57,17 +57,27 @@ define(['handlebars'], function (Handlebars) {
 			belongsTo = '.web',
 			removeTo  = '.ident';
 
+		$images.each(function (index) {
+			$('<li />').appendTo($('#portfolio_stage_nav'));
+		});
+
+		$(document).on('click', '#portfolio_stage_nav li', function (event) {
+			slide($(this).index());
+		});
+
 		slide(i);
 
 		function slide (i) {
+			$('#portfolio_stage_nav .active').removeClass('active');
+			$('#portfolio_stage_nav li').eq(i).addClass('active');
 			belongsTo = $images.eq(i).attr('data-belongsTo');
 			removeTo  = (belongsTo === '.web') ? '.ident' : '.web';
 			$(belongsTo).addClass('active');
 			$(removeTo).removeClass('active');
 			
-			$('#portfolio_title').text($images.eq(i).attr('alt')).addClass('visible').delay(4000).removeClass('visible');
+			$('#portfolio_title').text($images.eq(i).attr('alt')).addClass('visible').delay(15000).removeClass('visible');
 			
-			$images.eq(i).addClass('visible').delay(4000).queue(function (next) {
+			$images.eq(i).addClass('visible').delay(15000).queue(function (next) {
 				$(this).removeClass('visible')
 				i = (i + 1 < $images.length) ? i + 1 : 0;
 				next();
