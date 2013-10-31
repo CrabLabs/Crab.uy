@@ -12,7 +12,5 @@ require.config({
 
 require(['app', 'jquery', 'handlebars'], function (app, $, Handlebars) {
     'use strict';
-    // use app here
-    // console.log(app);
-    console.log(Handlebars);
+    
 });

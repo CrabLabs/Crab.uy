@@ -1,36 +1,15 @@
 /*global define */
 define(['handlebars'], function (Handlebars) {
     'use strict';
-    console.log(Handlebars);
 
-    var identyShowTemplate,
+    var identyShowTemplate = Handlebars.compile($('#portfolio-ident-show-template').html()),
 		webShowTemplate,
-		identyTemplate,
-		webTemplate;
+		identyTemplate = Handlebars.compile($('#portfolio-ident-template').html()),
+		webTemplate = Handlebars.compile($('#portfolio-web-template').html());
 
-	$(document).on('ready', function () {
-		$('a[href*=#]').click(function() {
-			if (location.pathname.replace(/^\//, ') == this.pathname.replace(/^\//, ') && location.hostname == this.hostname) {
-				var targetOffset, $target = $(this.hash);
-				$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
-				
-				if ($target.length) {
-					targetOffset = $target.offset().top;
-					$('html, body').animate({
-						scrollTop: targetOffset
-					}, 1000);
-
-					return false;
-				}
-			}
-		});
-
-		identyTemplate 		= Handlebars.compile($('#portfolio-ident-template').html());
-		identyShowTemplate 	= Handlebars.compile($('#portfolio-ident-show-template').html());
-		webTemplate 		= Handlebars.compile($('#portfolio-web-template').html());
-
-		$('.web').click();
-	});
+	setTimeout(function () {
+		$('.web').trigger('click');
+	}, 200);
 
 	$(document).on('scroll', function (event) {
 		var scrollTop = $(document).scrollTop(),
@@ -53,6 +32,22 @@ define(['handlebars'], function (Handlebars) {
 
 			$('#home').css('background-position-y', scrollTop / 2);
 			$('#canvas').css('opacity', Math.abs(scrollMod - 1));
+		}
+	});
+
+	$('a[href*=#]').click(function() {
+		if (location.pathname.replace(/^\//, ') == this.pathname.replace(/^\//, ') && location.hostname == this.hostname) {
+			var targetOffset, $target = $(this.hash);
+			$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+			
+			if ($target.length) {
+				targetOffset = $target.offset().top;
+				$('html, body').animate({
+					scrollTop: targetOffset
+				}, 1000);
+
+				return false;
+			}
 		}
 	});
 
