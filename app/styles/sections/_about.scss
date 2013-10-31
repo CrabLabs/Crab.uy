@@ -1,4 +1,18 @@
 &#about{
+	p{
+		display: block;
+		font-weight: $light;
+		line-height: 1.4em;
+		text-align: right;
+		width: 560px;
+		span{
+			font-size: 1.4em;
+			font-weight: $light;
+		}
+		b{
+			font-style: italic;
+		}
+	}
 	ul{
 		display: block;
 		position: absolute;
