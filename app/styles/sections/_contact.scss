@@ -150,6 +150,11 @@
 				opacity: 0.25;
 				width: 100px;
 				transition: all 100ms;
+				a{
+					display: block;
+					height: 100%;
+					width: 100%;
+				}
 				&.ecobox{
 					background-image: url(../images/footer/ecobox.png);
 					background-image: url(../images/footer/ecobox.svg), url(../images/footer/ecobox.png);
