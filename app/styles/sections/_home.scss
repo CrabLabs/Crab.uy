@@ -17,10 +17,14 @@
 		height: 250px;
 		margin: 0 auto;
 		position: relative;
-		top: -webkit-calc(50% - 125px);
-		top: -moz-calc(50% - 125px);
 		top: calc(50% - 125px);
 		width: 250px;
+		
+		@media #{$mobile_mid}{
+			height: 150px;
+			top: calc(50% - 75px);
+			width: 150px;
+		}
 	}
 	canvas{
 		display: block;
