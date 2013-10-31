@@ -1,36 +1,42 @@
 @-webkit-keyframes gu{
-	from{bottom: -100px; right: -100px;}
-	to{bottom: -200px; right: -500px;}
+	0%{bottom: -100px; right: -100px;}
+	50%{bottom: -200px; right: -500px;}
+	100%{bottom: -100px; right: -100px;}
 }
 @-moz-keyframes gu{
-	from{bottom: -100px; right: -100px;}
-	to{bottom: -200px; right: -500px;}
+	0%{bottom: -100px; right: -100px;}
+	50%{bottom: -200px; right: -500px;}
+	100%{bottom: -100px; right: -100px;}
 }
 @-o-keyframes gu{
-	from{bottom: -100px; right: -100px;}
-	to{bottom: -200px; right: -500px;
-	}
+	0%{bottom: -100px; right: -100px;}
+	50%{bottom: -200px; right: -500px;}
+	100%{bottom: -100px; right: -100px;}
 }
 @keyframes gu{
-	from{bottom: -100px; right: -100px;}
-	to{bottom: -200px; right: -500px;
-	}
+	0%{bottom: -100px; right: -100px;}
+	50%{bottom: -200px; right: -500px;}
+	100%{bottom: -100px; right: -100px;}
 }
 @-webkit-keyframes ro{
-	from{bottom: -100px; right: -500px;}
-	to{bottom: -200px; right: -900px;}
+	0%{bottom: -100px; right: -500px;}
+	50%{bottom: -200px; right: -900px;}
+	0%{bottom: -100px; right: -500px;}
 }
 @-moz-keyframes ro{
-	from{bottom: -100px; right: -500px;}
-	to{bottom: -200px; right: -900px;}
+	0%{bottom: -100px; right: -500px;}
+	50%{bottom: -200px; right: -900px;}
+	0%{bottom: -100px; right: -500px;}
 }
 @-o-keyframes ro{
-	from{bottom: -100px; right: -500px;}
-	to{bottom: -200px; right: -900px;}
+	0%{bottom: -100px; right: -500px;}
+	50%{bottom: -200px; right: -900px;}
+	0%{bottom: -100px; right: -500px;}
 }
 @keyframes ro{
-	from{bottom: -100px; right: -500px;}
-	to{bottom: -200px; right: -900px;}
+	0%{bottom: -100px; right: -500px;}
+	50%{bottom: -200px; right: -900px;}
+	0%{bottom: -100px; right: -500px;}
 }
 
 &#about{
@@ -47,7 +53,7 @@
 			height: 800px;
 			overflow: hidden;
 			position: relative;
-			width: 280px;
+			width: 265px;
 			&#gu{
 				left: 0;
 				-webkit-mask-image: url(../img/guille.png), url(../img/guille.svg);

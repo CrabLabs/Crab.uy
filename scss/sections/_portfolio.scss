@@ -31,12 +31,8 @@
 
 	#portfolio_stage{
 		height: 80%;
-		margin-left: 200px;
-		margin-right: 100px;
-		width: -webkit-calc(100% - 300px);
-		width:    -moz-calc(100% - 300px);
-		width:         calc(100% - 300px);
-
+		margin: 0 auto;
+		width: 960px;
 		#portfolio_ident{
 			// overflow-x: scroll;
 			// overflow-y: hidden;
@@ -44,10 +40,10 @@
 			li{
 				float: left;
 				// display: inline-block;
-				height: 220px;
+				height: 180px;
 				margin: 5px;
 				position: relative;
-				width: 220px;
+				width: 180px;
 				&:hover{
 					cursor: pointer;
 					img{
@@ -58,8 +54,8 @@
 					}
 				}
 				img{
-					height: 220px;
-					width: 220px;
+					height: 180px;
+					width: 180px;
 					-webkit-transition: all 100ms;
 					   -moz-transition: all 100ms;
 					    -ms-transition: all 100ms;
@@ -83,8 +79,10 @@
 			li{
 				img{
 					display: block;
-					max-height: 550px;
+					max-height: 450px;
 					margin: 0 auto;
+					position: relative;
+					top: 50px;
 				}
 				span{
 					display: none;

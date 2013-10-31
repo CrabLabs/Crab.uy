@@ -1,10 +1,11 @@
 &#contact{
 	background: $gray;
+	color: $white;
 	form{
 		display: inline-block;
 		margin: 40px;
-		position: absolute;
-		right: 0;
+		position: relative;
+		left: calc(50% - 180px);
 		width: 360px;
 		input, textarea{
 			background: $white;
@@ -30,6 +31,15 @@
 			width: auto;
 		}
 	}
+	p{
+		background: #444;
+		display: block;
+		height: 1px;
+		margin: 0 auto;
+		position: relative;
+		top: 80px;
+		width: 80%;
+	}
 	span{
 		color: #666;
 		bottom: 20px;
@@ -40,6 +50,16 @@
 		a{
 			color: #999;
 			font-size: 1em;
+		}
+	}
+	ul{
+		bottom: 100px;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		li{
+			color: $white;
+			display: inline-block;
 		}
 	}
 }
