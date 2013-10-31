@@ -1,0 +1,71 @@
+@keyframes gu{
+	0%{
+		bottom: -100px; 
+		right: -100px;
+	}
+	50%{
+		bottom: -200px;
+		right: -500px;
+	}
+	100%{
+		bottom: -100px;
+		right: -100px;
+	}
+}
+@keyframes ro{
+	0%{
+		bottom: -100px;
+		right: -500px;
+	}
+	50%{
+		bottom: -200px;
+		right: -900px;
+	}
+	0%{
+		bottom: -100px;
+		right: -500px;
+	}
+}
+
+&#about{
+	ul{
+		display: block;
+		position: absolute;
+		transform: scale(0.75);
+		li{
+			display: inline-block;
+			height: 800px;
+			overflow: hidden;
+			position: relative;
+			width: 265px;
+			&#gu{
+				left: 0;
+				mask-image: url(../img/guille.png), url(../img/guille.svg);
+				&:hover .mask{
+					animation: gu infinite 5s;
+				}
+				.mask{
+					bottom: -100px;
+					right: -100px;
+				}
+			}
+			&#ro{
+				mask-image: url(../img/ro.png), url(../img/ro.svg);
+				&:hover .mask{
+					animation: ro infinite 5s;
+				}
+				.mask{
+					bottom: -100px;
+					right: -500px;
+				}
+			}
+			.mask{
+				background: url(../img/bg-nos.jpg) no-repeat;
+				display: block;
+				height: 800px;
+				position: absolute;
+				width: 1050px;
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+@import "compass";
+@import "compass/reset";
+@import "variables";
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+
+html, body{
+	height: 100%;
+	min-height: 100%;
+}
+
+body{
+	background: $white;
+	margin: 0 auto;
+	min-height: 100%;
+}
+
+@import "header";
+
+@import "main";
+
+p, a, li, span, h1, h2, h3, h4, h5, h6, input, textarea{
+	color: $gray;
+	font-family: $open;
+}
+p, a, li, span{
+	font-size: 0.8em;
+	font-weight: $regular;
+	line-height:1.5em;
+	text-decoration: none;
+}
+h1, h2, h3{
+	font-weight: $light;
+}
+h4, h5, h6{
+	font-weight: $bold;
+}
+h1{font-size: 0%;}
+h2{font-size: 2.8em;line-height:2.5em;border-bottom:1px solid $white;}
+h3{font-size: 2em;line-height:2.2em;}
+h4{font-size: 2em;line-height:2.2em;}
+h5{font-size: 1.5em;line-height:2em;}
+h6{font-size: 1.2em;font-style: italic;line-height:1.8em;}
+
+input:focus, textarea:focus {outline: 1px solid #e0e0e0;}

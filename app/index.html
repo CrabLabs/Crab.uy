@@ -10,8 +10,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+        <!-- build:css(.tmp) styles/screen.scss -->
+        <link rel="stylesheet" href="styles/screen.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
@@ -21,17 +21,97 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <header class="nav">
+            <ul>
+                <li><a href="#home" class="posone">welcome home!</a></li>
+                <li><a href="#portfolio" class="postwo">some works</a></li>
+                <li><a href="#about" class="postwo">who we are</a></li>
+                <li><a href="#contact" class="postwo">contact us</a></li>
+            </ul>
+            <div><h1 id="logo">crab</h1></div>
+        </header>
 
+        <div id="main" role="main">
+            <section id="home">
+                <!--<h1>Crab.uy</h1>-->
+                <canvas id="canvas" width="400" height="400"></canvas>
+                <span></span>
+            </section>
+            
+            <section id="portfolio">
+                <ul id="portfolio_nav">
+                    <li><a href="#web"><h3 class="web">web</h3></a></li>
+                    <li><a href="#identity"><h3 class="ident">identity</h3></a></li>
+                </ul>
+                
+                <div id="portfolio_stage"><!-- AJAX --></div>
 
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>Modernizr</li>
-            <li>RequireJS</li>
-          </ul>
+                <h2 id="portfolio_title">can experience be designed?</h2>
+            </section>
+            
+            <section id="about">
+                <ul>
+                    <li id="gu">
+                        <div class="mask"></div>
+                    </li>
+                    <li id="ro">
+                        <div class="mask"></div>
+                    </li>
+                </ul>
+            </section>
+            
+            <section id="contact">
+                
+                <form action="mail.php" method="post" name="form">
+                    <input name="nombre" class="caja" type="text" placeholder="Nombre">
+                    <input name="email" class="caja" type="text" placeholder="Email">
+                    <textarea name="mensaje" cols="" rows="" wrap="off" class="mensaje"  placeholder="Tu mensaje.."></textarea>
+                    <input name="enviar" type="submit" value="Enviar" id="enviar">
+                </form>
+                
+                <p></p>
+
+                <ul>
+                    <li>logo crab</li>
+                    <li>logo ecobox</li>
+                    <li>logo crabster</li><br>
+                    <li>visit us on</li>
+                    <li>logo github</li>
+                    <li>logo facebook</li>
+                    <li>logo twitter</li>
+                </ul>
+
+                <span>design &amp; develop <a href="http://crab.uy">crab.uy</a> - © 2013 crab labs</span>
+            </section>
         </div>
+
+        <script id="portfolio-ident-template" type="text/x-handlebars-template">
+            <ul id="portfolio_ident">
+                {{#each projects}}
+                    <li data-id="{{ id }}">
+                        <span>{{ title }}</span>
+                        <img src="{{ img }}">
+                    </li>
+                {{/each}}
+            </ul>
+        </script>
+
+        <script id="portfolio-ident-show-template" type="text/x-handlebars-template">
+            <div id="portfolio_ident_show">
+                <img src="{{ img1 }}">
+            </div>
+        </script>
+
+        <script id="portfolio-web-template" type="text/x-handlebars-template">
+            <ul id="portfolio_web">
+                {{#each projects}}
+                    <li data-id="{{ id }}">
+                        <span>{{ title }}</span>
+                        <img src="{{ img }}">
+                    </li>
+                {{/each}}
+            </ul>
+        </script>
 
 
         <!-- build:js scripts/vendor.js -->
