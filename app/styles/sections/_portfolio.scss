@@ -28,14 +28,25 @@
 	#portfolio_stage{
 		height: 80%;
 		margin: 0 auto;
+		position: relative;
 		width: 960px;
-		#portfolio_ident{
-			// overflow-x: scroll;
-			// overflow-y: hidden;
-			// white-space: nowrap;
+		img{
+			opacity: 0;
+			position: absolute;
+			top: 100px;
+			transition: all 400ms;
+			&.visible{
+				opacity: 1;
+				top: 0;
+			}
+		}
+		/*#portfolio_ident{
+			overflow-x: scroll;
+			overflow-y: hidden;
+			white-space: nowrap;
 			li{
 				float: left;
-				// display: inline-block;
+				display: inline-block;
 				height: 180px;
 				margin: 5px;
 				position: relative;
@@ -76,7 +87,7 @@
 					display: none;
 				}
 			}
-		}
+		} */
 	}
 
 	#portfolio_title{

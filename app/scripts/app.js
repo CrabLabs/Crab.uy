@@ -2,14 +2,14 @@
 define(['handlebars'], function (Handlebars) {
     'use strict';
 
-    var identyShowTemplate = Handlebars.compile($('#portfolio-ident-show-template').html()),
+    /*var identyShowTemplate = Handlebars.compile($('#portfolio-ident-show-template').html()),
 		webShowTemplate,
 		identyTemplate = Handlebars.compile($('#portfolio-ident-template').html()),
 		webTemplate = Handlebars.compile($('#portfolio-web-template').html());
 
 	setTimeout(function () {
 		$('.web').trigger('click');
-	}, 200);
+	}, 200);*/
 
 	$(document).on('scroll', function (event) {
 		var scrollTop = $(document).scrollTop(),
@@ -51,7 +51,29 @@ define(['handlebars'], function (Handlebars) {
 		}
 	});
 
-	$('.ident').on('click', function (event) {
+	(function () {
+		var i = 0,
+			$images = $("#portfolio_stage img"),
+			belongsTo = '.web',
+			removeTo  = '.ident';
+
+		slide(i);
+
+		function slide (i) {
+			belongsTo = $images.eq(i).attr('data-belongsTo');
+			removeTo  = (belongsTo === '.web') ? '.ident' : '.web';
+			$(belongsTo).addClass('active');
+			$(removeTo).removeClass('active');
+			$images.eq(i).addClass('visible').delay(4000).queue(function (next) {
+				$(this).removeClass('visible')
+				i = (i + 1 < $images.length) ? i + 1 : 0;
+				slide(i);
+			});
+			
+		};
+	}());
+
+	/*$('.ident').on('click', function (event) {
 		event.preventDefault();
 
 		$(this).addClass('active');
@@ -92,6 +114,6 @@ define(['handlebars'], function (Handlebars) {
 				$('#portfolio_stage').fadeIn();
 			});
 		});
-	});
+	});*/
 
 });

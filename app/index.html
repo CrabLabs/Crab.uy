@@ -42,7 +42,11 @@
                     <li><a href="#identity"><h3 class="ident">identity</h3></a></li>
                 </ul>
                 
-                <div id="portfolio_stage"><!-- AJAX --></div>
+                <div id="portfolio_stage">
+                    <img data-belongsTo=".web" src="images/works/web/latimar_1.png">
+                    <img data-belongsTo=".ident" src="images/works/ident/ident_1.jpg">
+                    <img data-belongsTo=".ident" src="images/works/ident/ident_2.jpg">
+                </div>
 
                 <h2 id="portfolio_title">can experience be designed?</h2>
             </section>
@@ -86,7 +90,7 @@
             </section>
         </div>
 
-        <script id="portfolio-ident-template" type="text/x-handlebars-template">
+        <!--<script id="portfolio-ident-template" type="text/x-handlebars-template">
             <ul id="portfolio_ident">
                 {{#each projects}}
                     <li class='portfolio_ident_project' data-id="{{ id }}">
@@ -112,7 +116,7 @@
                     </li>
                 {{/each}}
             </ul>
-        </script>
+        </script>-->
 
 
         <!-- build:js scripts/vendor.js -->
