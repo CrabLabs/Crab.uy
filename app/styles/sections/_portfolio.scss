@@ -35,14 +35,15 @@
 		position: relative;
 		width: 960px;
 		img{
+			left: 100px;
 			max-height: 450px;
 			opacity: 0;
 			position: absolute;
-			top: 100px;
-			transition: all 400ms;
+			top: 50px;
+			transition: all 200ms;
 			&.visible{
+				left: 0px;
 				opacity: 1;
-				top: 50px;
 			}
 		}
 		/*#portfolio_ident{
