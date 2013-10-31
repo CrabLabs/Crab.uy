@@ -1,32 +1,3 @@
-@keyframes gu{
-	0%{
-		bottom: -100px; 
-		right: -100px;
-	}
-	50%{
-		bottom: -200px;
-		right: -500px;
-	}
-	100%{
-		bottom: -100px;
-		right: -100px;
-	}
-}
-@keyframes ro{
-	0%{
-		bottom: -100px;
-		right: -500px;
-	}
-	50%{
-		bottom: -200px;
-		right: -900px;
-	}
-	0%{
-		bottom: -100px;
-		right: -500px;
-	}
-}
-
 &#about{
 	ul{
 		display: block;
