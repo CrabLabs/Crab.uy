@@ -2,6 +2,11 @@
 	background: url(../images/bg.jpg) no-repeat;
 	background-size: cover;
 
+	@media #{$mobile_mid}{
+		background-position: right;
+		height: 50%;
+	}
+
 	h1{
 		background-image: url(../images/crab.png);
 		background-image: url(../images/crab.png), url(../images/crab.svg);
