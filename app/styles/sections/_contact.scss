@@ -55,6 +55,11 @@
 				opacity: 0.15;
 				width: 28px;
 				transition: all 100ms;
+				a{
+					display: block;
+					height: 100%;
+					width: 100%;
+				}
 				&.github{
 					background-image: url(../images/footer/github.png);
 					background-image: url(../images/footer/github.svg), url(../images/footer/github.png);
