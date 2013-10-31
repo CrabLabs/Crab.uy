@@ -1,0 +1,74 @@
+{"projects": [
+	{
+		"id": 0,
+		"title": "Latimar",
+		"desc": "Lorem",
+		"img": "img/works/ident/ident_1.jpg"
+	},
+	{
+		"id": 1,
+		"title": "Architect Universe",
+		"desc": "Lorems",
+		"img": "img/works/ident/ident_2.jpg"
+	},
+	{
+		"id": 2,
+		"title": "Week",
+		"desc": "Lorems",
+		"img": "img/works/ident/ident_3.jpg"
+	},
+	{
+		"id": 3,
+		"title": "Publihomes",
+		"desc": "Lorems",
+		"img": "img/works/ident/ident_4.jpg"
+	},
+	{
+		"id": 4,
+		"title": "Distripet",
+		"desc": "Lorems",
+		"img": "img/works/ident/ident_5.jpg"
+	},
+	{
+		"id": 5,
+		"title": "I-Tec",
+		"desc": "Lorems",
+		"img": "img/works/ident/ident_6.jpg"
+	},
+	{
+		"id": 6,
+		"title": "TuMovida",
+		"desc": "Lorems",
+		"img": "img/works/ident/ident_7.jpg"
+	},
+	{
+		"id": 7,
+		"title": "Porvenir",
+		"desc": "Lorems",
+		"img": "img/works/ident/ident_8.jpg"
+	},
+	{
+		"id": 8,
+		"title": "Ecobox",
+		"desc": "Lorems",
+		"img": "img/works/ident/ident_9.jpg"
+	},
+	{
+		"id": 9,
+		"title": "Crabster",
+		"desc": "Lorems",
+		"img": "img/works/ident/ident_10.jpg"
+	},
+	{
+		"id": 10,
+		"title": "Piccolina",
+		"desc": "Lorems",
+		"img": "img/works/ident/ident_11.jpg"
+	},
+	{
+		"id": 11,
+		"title": "Munisa corp.",
+		"desc": "Lorems",
+		"img": "img/works/ident/ident_12.jpg"
+	}
+]}
