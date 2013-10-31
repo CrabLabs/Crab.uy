@@ -14,7 +14,7 @@
 		}
 		#visit-footer{
 			bottom: 20px;
-			height: 40px;
+			height: 35px;
 			margin: 0;
 			position: relative;
 			span{
@@ -26,10 +26,10 @@
 				width: auto;
 			}
 			.link-footer{
-				height: 40px;
+				height: 35px;
 				margin: 0 10px;
 				opacity: 0.15;
-				width: 40px;
+				width: 35px;
 				transition: all 100ms;
 				&.github{
 					background-image: url(../images/footer/github.png);
