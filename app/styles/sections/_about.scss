@@ -1,12 +1,16 @@
 &#about{
 	p{
 		display: block;
+		font-size: 1.2em;
 		font-weight: $light;
-		line-height: 1.4em;
+		left: calc(50% - 100px);
+		line-height: 1.6em;
+		position: relative;
 		text-align: right;
+		top: 100px;
 		width: 560px;
 		span{
-			font-size: 1.4em;
+			font-size: 1.8em;
 			font-weight: $light;
 		}
 		b{

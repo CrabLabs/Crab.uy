@@ -1,11 +1,17 @@
 &#contact{
 	background: $gray;
 	color: $white;
+	h2{
+		color: $white;
+		border: none;
+		margin: 20px 0;
+		text-align: center;
+	}
 	form{
 		display: inline-block;
-		margin: 40px;
+		margin: 20px 0;
 		position: relative;
-		left: calc(50% - 180px);
+		left: calc(50% - 160px);
 		width: 360px;
 		input, textarea{
 			background: $white;
