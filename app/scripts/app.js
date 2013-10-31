@@ -58,7 +58,7 @@ define(['handlebars'], function (Handlebars) {
 			removeTo  = '.ident';
 
 		$images.each(function (index) {
-			$('<li />').appendTo($('#portfolio_stage_nav'));
+			$('<li />').html('&bull;').appendTo($('#portfolio_stage_nav'));
 		});
 
 		$(document).on('click', '#portfolio_stage_nav li', function (event) {
