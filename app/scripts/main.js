@@ -1,16 +1,10 @@
 require.config({
     paths: {
-        jquery: '../bower_components/jquery/jquery',
-        handlebars: 'vendor/handlebars'
-    },
-    shim: {
-    	handlebars: {
-    		exports: 'Handlebars'
-    	}
+        jquery: '../bower_components/jquery/jquery'
     }
 });
 
-require(['app', 'jquery', 'handlebars'], function (app, $, Handlebars) {
+require(['app', 'slider', 'jquery'], function (app, slider, $) {
     'use strict';
     
 });
